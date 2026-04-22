@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 function Counter() {
 
@@ -9,36 +9,29 @@ function Counter() {
     }
 
     const decrease = () => {
-        if (counter > 0) {
-            setCounter(counter - 1);
-        }
+        setCounter(counter - 1);
     }
 
     useEffect(() => {
-        document.title = `Counter: ${counter}`;
-    });
+        console.log("Hello, world!");
+    })
+
 
     useEffect(() => {
-        console.log("Hello from the second useEffect");
-    }, []);
+        console.log(counter);
+    }, [])
 
     useEffect(() => {
-        console.log("Hello from the third useEffect");
-    }, [counter]);
+        console.log("counter has been updated " + counter);
+    }, [counter])
 
     return (
-        <section className="center">
-            <div>
-                <button onClick={increase}>INCREAMENT</button>
-
-                <p>{counter}</p>
-
-                <button onClick={decrease} disabled={counter === 0} >
-                    DECREAMENT
-                </button>
-            </div>
-        </section>
+        <div className="flex justify-center items-center min-h-screen flex-col gap-4 bg-gray-950 text-white font-bold">
+            <button onClick={increase} className="rounded-lg bg-blue-500 px-4 py-2 font-medium text-white transition hover:bg-blue-600" >Increase</button>
+            <h1 className="text-5xl">{counter}</h1>
+            <button onClick={decrease} className="rounded-lg bg-blue-500 px-4 py-2 font-medium text-white transition hover:bg-blue-600" >Decrease</button>
+        </div>
     )
 }
 
-export default Counter;
+export default Counter

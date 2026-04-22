@@ -5,7 +5,7 @@ import WindowResize from './components/resize'
 function App() {
 
   return (
-    <WindowResize />
+    <Counter />
   )
 }
 
