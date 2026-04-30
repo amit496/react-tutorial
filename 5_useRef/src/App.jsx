@@ -1,11 +1,11 @@
 import Counter from './components/counter'
 import Timer from './components/timer'
 import WindowResize from './components/resize'
-import Stopwatch from './components/stopwatch'
+
 function App() {
 
   return (
-    <Stopwatch />
+    <Timer />
   )
 }
 
