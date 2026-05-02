@@ -1,11 +1,9 @@
-import Counter from './components/counter'
-import Timer from './components/timer'
-import WindowResize from './components/resize'
+import StopWatch from "./components/stopwatch"
 
 function App() {
 
   return (
-    <Timer />
+    <StopWatch />
   )
 }
 
